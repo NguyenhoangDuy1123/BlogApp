@@ -1,6 +1,6 @@
-# Homework 1 - *Name of App*
+# Homework 1 - *BlogApp*
 
-**Name of your app** Đây là trang web cho phép người dùng viết blog. Thời gian nộp: 0h ngày 3/10
+**BlogApp** Đây là trang web cho phép người dùng viết blog. Thời gian nộp: 0h ngày 3/10
 
 Danh sách sinh viên: **1312085-Nguyễn Hoàng Duy**
 
