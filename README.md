@@ -3,7 +3,7 @@
 **Name of your app** Đây là trang web cho phép người dùng viết blog. Thời gian nộp: 0h ngày 3/10
 
 Danh sách sinh viên: **Your Name Here**
-
+1312085-Nguyễn Hoàng Duy
 URL: **Insert your Heroku URL here**
 
 ## Chức năng
