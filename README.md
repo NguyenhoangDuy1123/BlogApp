@@ -4,7 +4,7 @@
 
 Danh sách sinh viên: **1312085-Nguyễn Hoàng Duy**
 
-URL: **Insert your Heroku URL here**
+URL: **https://calm-bayou-30257.herokuapp.com/**
 
 ## Chức năng
 
