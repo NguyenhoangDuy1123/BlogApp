@@ -1,7 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
 		<div id="LeftPadding" class="col-xs-3">
-			
         </div>
 		
         <div id="content" class="col-xs-9">
@@ -17,21 +16,35 @@
 						</ul>
 					</div>
 				<% end %>
- 
-				<p>
-					<%= f.label :title %><br>
-					<%= f.text_field :title %>
-				</p>
-			 
-				<p>
-					<%= f.label :text %><br>
-					<%= f.text_area :text, size: "40x20" %>
-				</p>
-			 
-				<p>
-					<%= f.submit %>
-				</p>
- 
+				
+				<div class="row">
+					<div class="col-xs-12">
+						<p>
+							<%= f.label :title %><br>
+							<%= f.text_field :title %>
+						</p>
+				 
+						<p>
+							<%= f.label :text %><br>
+							<%= f.text_area :text, size: "40x20" %>
+						</p>
+					</div>
+					
+				</div>
+				
+				<div class="row">	
+					<div class="col-xs-3">
+						<%= f.submit %>
+					</div>
+					
+					<div class="col-xs-3">
+					</div>
+					
+					<div class="col-xs-6">
+						<%= link_to 'Back', articles_path, class: 'btn btn-default btn-sm'%>
+					</div>
+				</div>
+				
 			<% end %>
 		</div>
 	</div>
