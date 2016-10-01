@@ -1,22 +1,68 @@
-<h1>Listing articles</h1>
-<%= link_to 'New article', new_article_path %>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-	<th>Link</th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article), method: :get %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="container-fluid">
+	<div class="row">
+		<div id="LeftPadding" class="col-xs-3">
+			
+        </div>
+		
+        <div id="content" class="col-xs-6">
+			<div class="row">
+				<div id="LeftPadding" class="col-xs-3">
+					
+				</div>
+				
+				<div id="content" class="col-xs-6">
+					<h1>My blog</h1>
+				</div>
+				
+				<div id="RightPadding" class="col-xs-3">
+
+				</div>
+			</div>
+		</div>
+		
+		<div id="RightPadding" class="col-xs-3">
+
+        </div>
+	</div>
+	
+	<div class="row">
+		<div id="LeftPadding" class="col-xs-6">
+        </div>
+		
+        <div id="content" class="col-xs-3">
+			<%= link_to 'New article', new_article_path, class: 'btn btn-success'%>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div id="LeftPadding" class="col-xs-3"/>
+        </div>
+		
+        <div id="content" class="col-xs-6">
+			<% @articles.each do |article| %>
+					<h1><%= link_to article.title, article_path(article), method: :get %></h1>
+					<p>
+						<%= markdown(article.text) %>
+					</p>
+	  
+					<%= link_to 'Edit', 
+								edit_article_path(article),
+								class: 'btn btn-primary btn-sm'%> |
+					
+					<%= link_to 'Delete', article_path(article),
+								method: :delete,
+								data: { confirm: 'Are you sure?' },
+								class: 'btn btn-danger btn-sm'%>
+	  
+					<% if article %>
+						<hr size="60" />
+					<% end %>
+			<% end %>
+		</div>
+		
+		<div id="RightPadding" class="col-xs-3">
+        </div>
+		
+	</div>
+</div>
+
