@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	def index
-		@articles = Article.all
+		@articles = Article.order(created_at: :desc)
 	end
   
 	def new
@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
 	
 	def show
 		@article = Article.find(params[:id])
+		@article.increment!(:count, 1)
 	end
 	
 	def update
